@@ -1,0 +1,37 @@
+﻿@using CourseProject.Models.DataModels
+@using Microsoft.AspNetCore.Identity
+@using CourseProject.Data
+@{
+}
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+
+<div class="container">
+    <div class="d-flex justify-content-around mt-3">
+        <a asp-action="Index" asp-controller="Order" asp-route-id="@UserManager.GetUserId(User)" class="btn btn-check">
+            Orders
+        </a>
+        @if (User.IsInRole(RoleConst.Admin))
+        {
+            <a class="btn btn-outline-danger" asp-action="ConfirmIndex" asp-controller="Order">All Orders</a>
+            <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Create">Add Product</a>
+            <a class="btn btn-check" asp-controller="Category" asp-action="Create">Add Category</a>
+
+        }
+    </div>
+</div>
+
+
+<script>
+    var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'));
+    triggerTabList.forEach(function(triggerEl) {
+        var tabTrigger = new bootstrap.Tab(triggerEl);
+
+        triggerEl.addEventListener('click',
+            function(event) {
+                event.preventDefault();
+                tabTrigger.show();
+            })
+    })
+</script>

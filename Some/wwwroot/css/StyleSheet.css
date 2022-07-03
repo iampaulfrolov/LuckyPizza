@@ -1,0 +1,47 @@
+﻿.image {
+    width: 600px;
+    height: 500px;
+    object-fit:fill;
+}
+
+
+
+.box {
+    border: 1px dashed tomato;
+    border-radius: 20px; 
+    align-items: center;
+    margin: 5px;
+}
+
+.box img {
+    width: 300px;
+    height: 300px;
+}
+   
+a { 
+    text-decoration: none; 
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.filter-box {
+    list-style: none;
+}
+
+.filter-link:hover {
+    font-weight: 700;
+    color: red;
+}
+
+.filter-box li {
+    list-style: none;
+}
+
+.filter-box a {
+    color: black;
+    text-decoration: none;
+}
+
+

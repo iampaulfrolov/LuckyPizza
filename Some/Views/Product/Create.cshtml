@@ -1,0 +1,62 @@
+﻿@using CourseProject.Models.DataModels
+@model CourseProject.Models.ViewModels.ProductCreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="mt-5">Add</h1>
+
+<div class="row">
+    <div class="col-md-4 m-auto">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product.Title" class="control-label"></label>
+                <input asp-for="Product.Title" class="form-control" />
+                <span asp-validation-for="Product.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Description" class="control-label"></label>
+                <input asp-for="Product.Description" class="form-control" />
+                <span asp-validation-for="Product.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Price" class="control-label"></label>
+                <input asp-for="Product.Price" class="form-control" />
+                <span asp-validation-for="Product.Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Product.Quantity" class="control-label"></label>
+                <input asp-for="Product.Quantity" class="form-control" />
+                <span asp-validation-for="Product.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select class="form-control" style="width: 100%" asp-for="Product.Category.Id"
+                        asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+                    <option>Please select one</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="file" class="form-control-file" asp-for="Image" />
+            </div>
+
+            <div class="form-group ">
+                <button type="submit" style="width: 100%;" class="btn btn-primary">Create</button>
+            </div>
+            <div>
+
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8"></div>
+</div>
+
+<div>
+    <a asp-action="Index">Back</a>
+</div>
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

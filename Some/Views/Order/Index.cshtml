@@ -1,0 +1,42 @@
+﻿@model IEnumerable<CourseProject.Models.DataModels.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Orders</h1>
+
+
+@foreach (var order in Model)
+{
+<div>
+    <p>
+       Order date: @Html.DisplayFor(modelItem => order.Date)
+    </p>
+    
+    <div class="d-flex justify-content-between flex-wrap">
+        @foreach (var product in order.Products)
+        {
+            <div class="card mb-3" style="width: 15rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Title: @(product.Title)</h5>
+                    <p class="card-text">Price: @(product._Price)</p>
+                    <p class="card-text">Quantity: @(product._Quantity)</p>
+                    <p class="card-text">Amount: @(product._Price * product._Quantity)</p>
+                </div>
+            </div>
+        }
+    </div>
+    <div>
+        @*<a class="btn" asp-controller="Order" asp-action="Details">Details</a>*@
+    </div>
+
+</div>
+    <hr />
+}
+
+
+<div class="d-flex justify-content-between flex-wrap">
+</div>
+
+<a class="btn" asp-controller="User" asp-action="Index">Back</a>

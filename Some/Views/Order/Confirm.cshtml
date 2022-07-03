@@ -1,0 +1,98 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using CourseProject.Models.DataModels
+@model CourseProject.Models.ViewModels.OrderConfirmViewModel
+@inject UserManager<User> _userManager
+
+@foreach (var status in Model.StatusList)
+{
+    <a class="btn btn-outline-warning"
+       asp-controller="Order" asp-action="ConfirmIndex" asp-route-id="@status.Id">
+        @status.Name
+    </a>
+}
+<div id="msgform" class="form-popup" style="display: none; position: fixed; bottom: 0; right: 15px; border: 3px solid #f1f1f1; z-index: 9;" id="myForm">
+    <form class="form-container">
+
+        <label for="msg">
+            <b>Message</b>
+        </label>
+        <input type="text" placeholder="Enter Message" name="msg" required>
+
+        <button type="submit" class="btn" onclick="saveForm()">Save</button>
+        <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
+<table class="table details @(@Model.Orders[0].Status.Name == "in progress" ? "success" : "table-dark")  table-striped table-hover">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Username</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Manage</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @for (var i = 0; i < Model.Orders.Count(); i++)
+    {
+        <tr>
+            <th scope="row">@(i + 1)</th>
+            <td>@(Model.Orders[i].User.Name)</td>
+            <td>@Model.Orders[i].Products.Sum(p => (decimal) p.Quantity * p.Price)</td>
+
+            <td>
+                @if (Model.Orders[i].Status.Name == "in progress")
+                {
+                    <a class="btn btn-outline-warning"
+                       asp-controller="Order" asp-action="Confirm" asp-route-id="@Model.Orders[i].Id">
+                        Confirm
+                    </a>
+                    <a class="btn btn-outline-danger"
+                       asp-controller="Order" asp-action="Reject" asp-route-id="@Model.Orders[i].Id">
+                        Reject
+                    </a>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<script>
+    function openForm() {
+        document.getElementById("msgForm").style.display = "block";
+    }
+
+    function saveForm() {
+
+        var text = document.getElementsByName("msg").values()[0];
+
+        var msg = getCookie("msg");
+        if (msg == undefined)
+            msg = [new { text: text, userId: "@_userManager.GetUserId(User)" }];
+        else msg.add(new { text: text, userId: "@_userManager.GetUserId(User)" });
+        setCookie("msg", msg, 10);
+
+        document.getElementById("msgForm").style.display = "none";
+    }
+
+    function closeForm() {
+        document.getElementById("msgForm").style.display = "none";
+    }
+
+    function setCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+</script>

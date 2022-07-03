@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuckyPizza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/site.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm darken-1">
+            <div class="container nav-wrapper">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="text-light" asp-area="" asp-controller="Product" asp-action="Index">LuckyPizza</a>
+                        </li>
+                    </ul>
+
+                    <a class="text-light" style="margin-right: -50vw" asp-area="" asp-controller="Cart" asp-action="Index">
+                        <img width="25" height="25" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTk2IDM3NmE4IDggMCAwIDAgOC04di00OGE4IDggMCAwIDAgLTE2IDB2NDhhOCA4IDAgMCAwIDggOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im00ODggMjI0aC0xMDkuOTMxbC03NS43MzEtMTkyLjc3MWEyNC4wMDkgMjQuMDA5IDAgMCAwIC00Ni4zMzggOC4xMjggMjQgMjQgMCAwIDAgLTQ2LjMzOC04LjEyOGwtNzUuNzMxIDE5Mi43NzFoLTEwOS45MzFhOCA4IDAgMCAwIC04IDh2NDhhOCA4IDAgMCAwIDYuOTI3IDcuOTJsMjIuNjQxIDE4MS4xMjNjMS45MjEgMTUuMzY4IDE1LjU4IDI2Ljk1NyAzMS43NzQgMjYuOTU3aDM1Ny4zMTZjMTYuMTk0IDAgMjkuODUzLTExLjU4OSAzMS43NzQtMjYuOTU3bDIyLjY0MS0xODEuMTIzYTggOCAwIDAgMCA2LjkyNy03Ljkydi00OGE4IDggMCAwIDAgLTgtOHptLTIxNS4zMzMtMTg3LjE5MmE4IDggMCAwIDEgMTQuNzc4LjI3Mmw4NS4wNzYgMjE2LjU1NC0xNC44OTIgNS44NS04NS4wNzQtMjE2LjU1NGE3LjkzNSA3LjkzNSAwIDAgMSAuMTEyLTYuMTIyem03Mi42ODggMjM1LjE5MmgtMTc4LjcxbDEyLjU3MS0zMmgxNTMuNTY4em0tOTEuMDE3LTIyMy4yMTlhMjQuMDIzIDI0LjAyMyAwIDAgMCAxLjY2Mi04LjAyMiAyNC4wMjMgMjQuMDIzIDAgMCAwIDEuNjYyIDguMDIybDY4LjgzOCAxNzUuMjE5aC0xNDF6bS0yOS43ODMtMTEuN2E4IDggMCAxIDEgMTQuODkgNS44NTFsLTg1LjA3NCAyMTYuNTUyLTE0Ljg5Mi01Ljg1em0tMTkyLjU1NSAyMDIuOTE5aDk1LjY0NWwtNS45ODMgMTUuMjI5YTggOCAwIDAgMCA0LjUyMSAxMC4zNzFsMTYuMjg5IDYuNGgtMTEwLjQ3MnptNDE4LjU1NSAyMjcuMDU5Yy0uOTIyIDcuMzc4LTcuNzU2IDEyLjk0MS0xNS45IDEyLjk0MWgtMzU3LjMxM2MtOC4xNDEgMC0xNC45NzUtNS41NjMtMTUuOS0xMi45NDFsLTIyLjM4LTE3OS4wNTloNDMzLjg3NnptMjkuNDQ1LTE5NS4wNTloLTExMC40NzJsMTYuMjg5LTYuNGE4IDggMCAwIDAgNC41MjEtMTAuMzcxbC01Ljk4My0xNS4yMjloOTUuNjQ1eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTk2IDQ1NmE4IDggMCAwIDAgOC04di00OGE4IDggMCAwIDAgLTE2IDB2NDhhOCA4IDAgMCAwIDggOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0xMjggMzc2YTggOCAwIDAgMCA4LTh2LTQ4YTggOCAwIDAgMCAtMTYgMHY0OGE4IDggMCAwIDAgOCA4eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTEyOCA0NTZhOCA4IDAgMCAwIDgtOHYtNDhhOCA4IDAgMCAwIC0xNiAwdjQ4YTggOCAwIDAgMCA4IDh6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMTYwIDM3NmE4IDggMCAwIDAgOC04di00OGE4IDggMCAwIDAgLTE2IDB2NDhhOCA4IDAgMCAwIDggOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0xNjAgNDU2YTggOCAwIDAgMCA4LTh2LTQ4YTggOCAwIDAgMCAtMTYgMHY0OGE4IDggMCAwIDAgOCA4eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTE5MiAzNzZhOCA4IDAgMCAwIDgtOHYtNDhhOCA4IDAgMCAwIC0xNiAwdjQ4YTggOCAwIDAgMCA4IDh6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMTkyIDQ1NmE4IDggMCAwIDAgOC04di00OGE4IDggMCAwIDAgLTE2IDB2NDhhOCA4IDAgMCAwIDggOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0zMjAgMzc2YTggOCAwIDAgMCA4LTh2LTQ4YTggOCAwIDAgMCAtMTYgMHY0OGE4IDggMCAwIDAgOCA4eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTMyMCA0NTZhOCA4IDAgMCAwIDgtOHYtNDhhOCA4IDAgMCAwIC0xNiAwdjQ4YTggOCAwIDAgMCA4IDh6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMzUyIDM3NmE4IDggMCAwIDAgOC04di00OGE4IDggMCAwIDAgLTE2IDB2NDhhOCA4IDAgMCAwIDggOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0zNTIgNDU2YTggOCAwIDAgMCA4LTh2LTQ4YTggOCAwIDAgMCAtMTYgMHY0OGE4IDggMCAwIDAgOCA4eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTM4NCAzNzZhOCA4IDAgMCAwIDgtOHYtNDhhOCA4IDAgMCAwIC0xNiAwdjQ4YTggOCAwIDAgMCA4IDh6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMzg0IDQ1NmE4IDggMCAwIDAgOC04di00OGE4IDggMCAwIDAgLTE2IDB2NDhhOCA4IDAgMCAwIDggOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im00MTYgMzc2YTggOCAwIDAgMCA4LTh2LTQ4YTggOCAwIDAgMCAtMTYgMHY0OGE4IDggMCAwIDAgOCA4eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTQxNiA0NTZhOCA4IDAgMCAwIDgtOHYtNDhhOCA4IDAgMCAwIC0xNiAwdjQ4YTggOCAwIDAgMCA4IDh6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMjU2IDM3NmE4IDggMCAwIDAgOC04di00OGE4IDggMCAwIDAgLTE2IDB2NDhhOCA4IDAgMCAwIDggOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0yNTYgNDU2YTggOCAwIDAgMCA4LTh2LTQ4YTggOCAwIDAgMCAtMTYgMHY0OGE4IDggMCAwIDAgOCA4eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTIyNCAzNzZhOCA4IDAgMCAwIDgtOHYtNDhhOCA4IDAgMCAwIC0xNiAwdjQ4YTggOCAwIDAgMCA4IDh6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMjI0IDQ1NmE4IDggMCAwIDAgOC04di00OGE4IDggMCAwIDAgLTE2IDB2NDhhOCA4IDAgMCAwIDggOHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0yODggMzc2YTggOCAwIDAgMCA4LTh2LTQ4YTggOCAwIDAgMCAtMTYgMHY0OGE4IDggMCAwIDAgOCA4eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTI4OCA0NTZhOCA4IDAgMCAwIDgtOHYtNDhhOCA4IDAgMCAwIC0xNiAwdjQ4YTggOCAwIDAgMCA4IDh6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PC9nPjwvc3ZnPg==" /> <span id="cart-badge" class=" badge"></span>
+                    </a>
+
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        let cartBadge = document.getElementById("cart-badge");
+
+        let cart = JSON.parse(getCookie("cart"));
+        console.log(cartBadge.innerHTML);
+        console.log(cart["Items"].length);
+        if (cart["Items"].length > 0) {
+            cartBadge.isVisible = true;
+            cartBadge.innerHTML = cart["Items"].length;
+            cartBadge.style.marginLeft = "-12px";
+            cartBadge.style.marginTop = "5px";
+            cartBadge.style.color = "white";
+        }
+        else
+            cartBadge.isVisible = false;
+        function getCookie(name) {
+            let matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

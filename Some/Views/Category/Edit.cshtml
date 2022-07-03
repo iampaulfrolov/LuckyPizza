@@ -1,0 +1,32 @@
+﻿@model CourseProject.Models.DataModels.Category
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h3 style="margin-top: 200px;" class="text-center">Edit category</h3>
+
+<div class="row d-flex align-items-center justify-content-center" >
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <input asp-for="Id" type="hidden" />
+            <div class="form-group">
+                <input type="submit" style="width: 100%" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="link-dark text-center">
+    <a class="link-dark text-center" asp-action="Index" asp-controller="Product">Back</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

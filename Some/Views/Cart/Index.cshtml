@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using CourseProject.Models.DataModels
+@model CourseProject.Models.ViewModels.CartViewModel
+@inject SignInManager<User> SignInManager
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@if (Model.Items.Count != 0)
+{
+<div>
+    <h2 class="mb-2">Cart</h2>
+    <div class="d-flex align-items-center justify-content-between mb-5">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <a class="btn btn-success" asp-controller="Order" asp-action="Create">Create Order</a>
+        }
+        else
+        {
+            <a class="btn btn-success" onclick=" alert('Authorize to create order');">Create Order</a>
+        }
+        <p>Amount: @Html.DisplayFor(modelItem => Model.Amount)</p>
+    </div>
+</div>
+
+
+<div class="col-12 d-flex justify-content-start align-items-center flex-wrap">
+    @for (var i = 0; i < Model.Items.Count; i++)
+    {
+
+        <div class="box horizontal d-flex" style="display: flex; justify-content: space-around; width: 100%">
+            <div class="card-image">
+                    <img src="@Model.Items[i].Product.Image" class="card-img-top" alt="...">
+
+            </div>
+            <div class="card-content">
+                <p style="font-size: 32px;">@Model.Items[i].Product.Title</p>
+                <p>Price: @Model.Items[i].Product.Price</p>
+                <p>Quantity: @Model.Items[i].Quantity</p>
+                <a class="btn btn-danger" asp-controller="Cart" asp-action="Delete" asp-route-position="@i">Delete Item</a>
+            </div>
+        </div>
+
+    }
+</div>
+}
+else
+{
+    <h5 style="padding-top: 40vh;" class="text-center">Empty Cart</h5>
+}
