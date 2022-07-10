@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>aspnet-Some-2831ADD1-AC09-4647-AB78-291CC7A801BA</UserSecretsId>
     <AssemblyName>CourseProject</AssemblyName>
     <RootNamespace>CourseProject</RootNamespace>

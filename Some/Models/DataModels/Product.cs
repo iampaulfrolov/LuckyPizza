@@ -22,7 +22,7 @@ namespace CourseProject.Models.DataModels
         [DisplayName("Price")]
         public decimal Price { get; set; }
 
-        [ForeignKey("category_id")] 
+        [ForeignKey("categoryId")]
         public Category Category { get; set; }
 
         public int Quantity { get; set; }

@@ -21,9 +21,9 @@ namespace CourseProject.Models.DataModels
 
         [ForeignKey("provider_id")] public DeliveryProvider DeliveryProvider { get; set; }
 
-        [ForeignKey("type_id")] public DeliveryType DeliveryType { get; set; }
+        [ForeignKey("typeId")] public DeliveryType DeliveryType { get; set; }
 
-        [ForeignKey("order_id")] public Order Order { get; set; }
+        [ForeignKey("orderId")] public Order Order { get; set; }
 
         public Delivery()
         {
