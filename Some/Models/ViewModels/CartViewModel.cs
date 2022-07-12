@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using CourseProject.Models.DataModels;
-using Kursach.Models;
 
 namespace CourseProject.Models.ViewModels
 {
     [Serializable]
     public class CartViewModel
     {
-        public decimal Amount { get;  set; }
+        public decimal Amount { get; set; }
         public List<CartItemViewModel> Items { get; set; }
-        
+
         public void AddItem(CartItemViewModel item)
         {
             Items.Add(item);

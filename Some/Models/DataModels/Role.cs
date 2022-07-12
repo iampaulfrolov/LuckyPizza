@@ -1,6 +1,5 @@
 ﻿using System;
 using CourseProject.Attributes;
-using CourseProject.Models;
 using CourseProject.Models.DataModels;
 
 namespace CourseProject.Identity.Models

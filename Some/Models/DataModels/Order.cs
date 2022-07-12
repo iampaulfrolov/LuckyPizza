@@ -9,16 +9,13 @@ namespace CourseProject.Models.DataModels
     [TableName("Order")]
     public class Order : Entity
     {
-        [ForeignKey("userId")]
-        public User User { get; set; }
+        [ForeignKey("userId")] public User User { get; set; }
 
-        [ForeignKey("orderStatusId")]
-        public OrderStatus Status { get; set; }
+        [ForeignKey("orderStatusId")] public OrderStatus Status { get; set; }
 
         public DateTime Date { get; set; }
 
-        [ForeignKeyToMany("Product")]
-        public List<OrderProduct> Products { get; set; }
+        [ForeignKeyToMany("Product")] public List<OrderProduct> Products { get; set; }
 
 
         public Order()

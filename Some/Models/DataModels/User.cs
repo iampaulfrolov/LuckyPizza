@@ -14,8 +14,7 @@ namespace CourseProject.Models.DataModels
         public string Name { get; set; }
         public string PasswordHash { get; set; }
 
-        [ForeignKey("roleId")]
-        public Role Role { get; set; }
+        [ForeignKey("roleId")] public Role Role { get; set; }
         public string PhoneNumber { get; set; }
 
         public User()

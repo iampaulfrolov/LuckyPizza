@@ -11,8 +11,7 @@ namespace CourseProject.Models.DataModels
     [TableName("Delivery")]
     public class Delivery : Entity
     {
-        [DisplayName("Адреса доставки")]
-        public string Address { get; set; }
+        [DisplayName("Адреса доставки")] public string Address { get; set; }
 
         public DateTime Date { get; set; }
 
