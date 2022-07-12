@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CourseProject.Attributes;
+﻿using CourseProject.Attributes;
 
 namespace CourseProject.Models.DataModels
 {
