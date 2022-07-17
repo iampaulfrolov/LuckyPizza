@@ -1,15 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
-using CourseProject.Identity.Models;
 using CourseProject.Models.DataModels;
 using CourseProject.Models.ViewModels;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using System.Security.Principal;
 using CourseProject.Data;
 using CourseProject.Data.Repositories;
 using Microsoft.AspNetCore.Authorization;
@@ -112,7 +108,7 @@ namespace CourseProject.Controllers
         public async Task<IActionResult> Confirm(int id)
         {
             var order = await _orderRepository.GetById(id);
-            order.Status.Id = 2; //ага, попавсь!
+            order.Status.Id = 2;
             await _orderRepository.Update(order, o => o.Id, id);
             return RedirectToAction("ConfirmIndex");
         }
@@ -121,7 +117,7 @@ namespace CourseProject.Controllers
         public async Task<IActionResult> Reject(int id)
         {
             var order = await _orderRepository.GetById(id);
-            order.Status.Id = 3; //ага, попавсь!
+            order.Status.Id = 3;
             await _orderRepository.Update(order, o => o.Id, id);
             return RedirectToAction("ConfirmIndex");
         }

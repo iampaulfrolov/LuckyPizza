@@ -1,11 +1,12 @@
 ﻿using System;
 using CourseProject.Attributes;
+using CourseProject.Models;
 using CourseProject.Models.DataModels;
 
 namespace CourseProject.Identity.Models
 {
     [TableName("Role")]
-    public class Role : Entity
+    public class Role :Entity
     {
         public string Name { get; set; }
 

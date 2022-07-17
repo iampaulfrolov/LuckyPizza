@@ -11,18 +11,18 @@ namespace CourseProject.Models.DataModels
     [TableName("Delivery")]
     public class Delivery : Entity
     {
-        [DisplayName("Адреса доставки")] public string Address { get; set; }
+        [DisplayName("Адреса доставки")]
+        public string Address { get; set; }
 
         public DateTime Date { get; set; }
 
-        // not
         public int Parcel_number { get; set; }
 
         [ForeignKey("provider_id")] public DeliveryProvider DeliveryProvider { get; set; }
 
-        [ForeignKey("typeId")] public DeliveryType DeliveryType { get; set; }
+        [ForeignKey("type_id")] public DeliveryType DeliveryType { get; set; }
 
-        [ForeignKey("orderId")] public Order Order { get; set; }
+        [ForeignKey("order_id")] public Order Order { get; set; }
 
         public Delivery()
         {

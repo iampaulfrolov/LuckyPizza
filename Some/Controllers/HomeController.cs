@@ -42,11 +42,7 @@ namespace CourseProject.Controllers
 
         public async Task<IActionResult> Index()
         {
-            //var roles = await _roleRepository.GetAll();
-
             var user = new User() {Id = 24, Name = "gordon",UserName = "informatyka4444@wp.pl"};
-            //var result = await _userManager.CreateAsync(user, "password#4D");
-            //await _userManager.AddToRoleAsync(user,"admin");
             var products = await _repository.GetAll();
             var t = await _repository.Get(product => product.Category.Id, 1);
             var m = await _repository.Get(product => product.Price, 124);

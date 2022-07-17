@@ -184,7 +184,6 @@ namespace CourseProject.Data.Repositories
 
         private async Task<int> ExecuteNonQuery(string commandText)
         {
-            // File.AppendAllText(@"C:\Users\Max\Desktop\temp\text.txt", commandText + "\n");
             await using var connection = new SqlConnection(_connectionString);
             await using var command = new SqlCommand();
             await connection.OpenAsync();
@@ -226,7 +225,6 @@ namespace CourseProject.Data.Repositories
 
                     var resultTask =
                         await method.InvokeAsync(repository, new object?[] {relatedEntity, result});
-                    //File.AppendAllText(@"C:\Users\Max\Desktop\temp\text.txt", resultTask + "\n");
                 }
             }
 
@@ -241,7 +239,6 @@ namespace CourseProject.Data.Repositories
         private async Task<List<TEntity>> ExecuteSelect(string selectCommand)
         {
             var resultEntities = new List<TEntity>();
-            //File.AppendAllText(@"C:\Инфа\log.txt", selectCommand + "\n");
             await using var connection = new SqlConnection(_connectionString);
             await using var command = new SqlCommand();
             await connection.OpenAsync();

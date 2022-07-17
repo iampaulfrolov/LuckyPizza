@@ -5,6 +5,7 @@ using CourseProject.Models.DataModels;
 
 namespace CourseProject.Models.ViewModels
 {
+
     public class CategoryViewModel
     {
         public int Id { get; set; }

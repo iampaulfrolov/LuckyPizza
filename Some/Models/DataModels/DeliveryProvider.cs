@@ -2,7 +2,7 @@
 
 namespace CourseProject.Models.DataModels
 {
-    [TableName("Provider")]
+    [TableName("DeliveryProvider")]
     public class DeliveryProvider : Entity
     {
         public string Name { get; set; }
