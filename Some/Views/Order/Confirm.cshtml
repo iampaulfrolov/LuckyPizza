@@ -10,6 +10,15 @@
         @status.Name
     </a>
 }
+
+<style>
+    .hidden {
+        visibility: hidden;
+    }
+    .visible {
+        visibility: visible;
+    }
+</style>
 <div id="msgform" class="form-popup" style="display: none; position: fixed; bottom: 0; right: 15px; border: 3px solid #f1f1f1; z-index: 9;" id="myForm">
     <form class="form-container">
 
@@ -22,7 +31,15 @@
         <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
 </div>
-<table class="table details @(@Model.Orders[0].Status.Name == "in progress" ? "success" : "table-dark")  table-striped table-hover">
+
+@if (!Model.Orders.Any())
+{
+    <p class="text-center">"Дані відсутні"</p>
+}
+<table class="table details 
+        @(!Model.Orders.Any() ? "hidden" : "visible") 
+        @(Model.Orders.Any() && Model.Orders[0].Status.Name == "in progress" ? "success" : "table-dark")
+         table-striped table-hover">
     <thead>
     <tr>
         <th scope="col">#</th>
@@ -38,7 +55,7 @@
         <tr>
             <th scope="row">@(i + 1)</th>
             <td>@(Model.Orders[i].User.Name)</td>
-            <td>@Model.Orders[i].Products.Sum(p => (decimal) p.Quantity * p.Price)</td>
+            <td>@Model.Orders[i].Products.Sum(p => (decimal)p.Quantity * p.Price)</td>
 
             <td>
                 @if (Model.Orders[i].Status.Name == "in progress")

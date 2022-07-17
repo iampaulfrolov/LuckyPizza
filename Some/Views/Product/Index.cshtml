@@ -1,5 +1,4 @@
-﻿@using CourseProject.Models.ViewModels
-@model CourseProject.Models.ViewModels.ProductIndexViewModel
+﻿@model CourseProject.Models.ViewModels.ProductIndexViewModel
 
 @{
     ViewData["Title"] = "Main";
@@ -10,13 +9,13 @@
 <div class="row align-items-end">
  
     <p>Category: </p>
-
+    <div>
     <button id="asd" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
         Category
     </button>
     <div class="dropdown-menu" aria-labelledby="asd">
-        <h6 class="dropdown-header">By price</h6>
+        <h6 class="dropdown-header">By category</h6>
         @foreach (var cat in Model.Categories) {
             <p class="dropdown-item" asp-action="Index">
                 <a asp-action="GetByCategory" style="font-size: 18px;" asp-route-categoryId="@cat.Id">@cat.Name</a>
@@ -29,8 +28,9 @@
         }
 
     </div>
+    </div>
 
-
+    <div>
     <button style="margin-top: 20px;" class="btn btn-outline-secondary dropdown-toggle" id="qwer" type="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
         Filter
@@ -46,6 +46,7 @@
         <p class="dropdown-item">
             <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_desc")">Price lower</a>
         </p>
+    </div>
     </div>
 
     </div>

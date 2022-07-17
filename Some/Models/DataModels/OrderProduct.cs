@@ -5,8 +5,8 @@ namespace CourseProject.Models.DataModels
     [RelatedTableName("Product")]
     [RelatedEntityType("Product")]
     [MasterEntityName("Order")]
-    [TransitionTableName("Order_products")]
-    public class OrderProduct : Product
+    [TransitionTableName("OrderProduct")]
+    public class OrderProduct: Product
     {
         public int _Quantity { get; set; }
         public decimal _Price { get; set; }
@@ -21,4 +21,6 @@ namespace CourseProject.Models.DataModels
         {
         }
     }
+
+
 }
