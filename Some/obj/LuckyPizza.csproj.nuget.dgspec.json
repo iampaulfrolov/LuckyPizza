@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/paulfrolov/Downloads/kursach-devPaul/Some/LuckyPizza.csproj": {}
+    "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj": {}
   },
   "projects": {
-    "/Users/paulfrolov/Downloads/kursach-devPaul/Some/LuckyPizza.csproj": {
+    "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/paulfrolov/Downloads/kursach-devPaul/Some/LuckyPizza.csproj",
+        "projectUniqueName": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj",
         "projectName": "CourseProject",
-        "projectPath": "/Users/paulfrolov/Downloads/kursach-devPaul/Some/LuckyPizza.csproj",
+        "projectPath": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj",
         "packagesPath": "/Users/paulfrolov/.nuget/packages/",
-        "outputPath": "/Users/paulfrolov/Downloads/kursach-devPaul/Some/obj/",
+        "outputPath": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/paulfrolov/.nuget/NuGet/NuGet.Config"
@@ -61,6 +61,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.14.0, )"
             },
             "Microsoft.VisualStudio.Web.BrowserLink": {
               "target": "Package",
