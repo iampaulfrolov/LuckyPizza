@@ -1,12 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using CourseProject.Models.DataModels;
 using CourseProject.Models.ViewModels;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using CourseProject.Data;
@@ -42,7 +37,7 @@ namespace CourseProject.Controllers
             if (ModelState.IsValid)
             {
                 var user = new User { UserName = model.UserName, Name = model.Name, Surname = model.SurName,PhoneNumber = "new"};
-                await _userManager.AddToRoleAsync(user, RoleConst.Admin);
+                await _userManager.AddToRoleAsync(user, RoleConst.User);
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

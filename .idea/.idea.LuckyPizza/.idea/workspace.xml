@@ -8,29 +8,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="Fix Project">
-      <change beforePath="$PROJECT_DIR$/Some/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Controllers/OrderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/LuckyPizza.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Some/LuckyPizza.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/Delivery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/Delivery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/DeliveryProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/DeliveryProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/DeliveryType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/DeliveryType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/OrderProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/OrderProduct.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/Role.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/orderStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/orderStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/ErrorViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/ViewModels/CartViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/ViewModels/CartViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/ViewModels/CategoryViewModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/ViewModels/CategoryViewModels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/ViewModels/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/ViewModels/ErrorViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Properties/launchSettings.json" afterDir="false" />
+    <list default="true" id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Some/Views/Order/Confirm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Order/Confirm.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Views/Order/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Order/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Views/Product/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Product/Details.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Some/Views/Product/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Product/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Some/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/test.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/wwwroot/css/StyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/Some/wwwroot/css/StyleSheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Some/wwwroot/css/site.css" afterDir="false" />
+    </list>
+    <list id="f5d64220-c174-4ee2-a048-5a889afcc186" name="Changes2" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +38,47 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="fix" />
       </map>
     </option>
   </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza/Some/Models/DataModels/Category.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza/Some/Models/DataModels/DeliveryProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza/Some/Models/DataModels/DeliveryProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza/Some/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza/Some/Views/Order/Confirm.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza/Some/Views/Product/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza/Some/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza/Some/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JiraServerManager">
     <selected>-1</selected>
     <servers />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml">
+      <ranges>
+        <range start1="10" end1="29" start2="10" end2="13" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="30" end1="30" start2="14" end2="15" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="31" end1="33" start2="16" end2="25" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="47" end1="48" start2="39" end2="40" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="51" end1="51" start2="43" end2="50" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="52" end1="60" start2="51" end2="55" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="65" end1="65" start2="60" end2="81" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="74" end1="85" start2="90" end2="101" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="86" end1="90" start2="102" end2="106" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="92" end1="93" start2="108" end2="109" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="128" end1="129" start2="144" end2="146" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="134" end1="134" start2="151" end2="152" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
+        <range start1="163" end1="164" start2="181" end2="196" changelist="f5d64220-c174-4ee2-a048-5a889afcc186" />
+        <range start1="176" end1="177" start2="208" end2="221" changelist="f5d64220-c174-4ee2-a048-5a889afcc186" />
+        <range start1="186" end1="187" start2="230" end2="232" changelist="f5d64220-c174-4ee2-a048-5a889afcc186" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -72,25 +89,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;HotReloadSettingsPage&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "HotReloadSettingsPage",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver.localdb&quot;,
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver.localdb",
+      "sqlserver"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.LuckyPizza: Some">
     <configuration name="LuckyPizza: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Some/LuckyPizza.csproj" />
@@ -126,12 +143,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7b0462fd-8c92-4ad5-9983-39a93f75bdcc" name="Changes" comment="" />
+      <changelist id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="" />
+      <changelist id="f5d64220-c174-4ee2-a048-5a889afcc186" name="Changes2" comment="" />
       <created>1658082931241</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658082931241</updated>
       <workItem from="1658082935295" duration="6749000" />
+      <workItem from="1658338815181" duration="4462000" />
     </task>
     <task id="LOCAL-00001" summary="Fix project">
       <created>1658083093147</created>

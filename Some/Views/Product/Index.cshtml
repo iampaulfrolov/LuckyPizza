@@ -4,69 +4,74 @@
     ViewData["Title"] = "Main";
 }
 
+<style>
+    .gap {
+        gap: 10px;
+    }
+</style>
 <h1>Pizza</h1>
 
-<div class="row align-items-end">
- 
-    <p>Category: </p>
+<p>Filters:</p>
+<div class="row d-flex gap align-items-between">
+
     <div>
-    <button id="asd" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-        Category
-    </button>
-    <div class="dropdown-menu" aria-labelledby="asd">
-        <h6 class="dropdown-header">By category</h6>
-        @foreach (var cat in Model.Categories) {
+        <button id="asd" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+            Category
+        </button>
+        <div class="dropdown-menu" aria-labelledby="asd">
+            <h6 class="dropdown-header">By category</h6>
+            @foreach (var cat in Model.Categories)
+            {
+                <p class="dropdown-item" asp-action="Index">
+                    <a asp-action="GetByCategory" style="font-size: 18px;" asp-route-categoryId="@cat.Id">@cat.Name</a>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a class="font-italic " style="color: red" asp-controller="Category" asp-action="Edit" asp-route-id="@cat.Id">edit</a>
+                    }
+                </p>
+            }
+
+        </div>
+    </div>
+
+    <div>
+        <button class="btn btn-outline-secondary dropdown-toggle" id="qwer" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+            Price
+        </button>
+        <div class="dropdown-menu" aria-labelledby="qwer">
+            <h6 class="dropdown-header">By price</h6>
             <p class="dropdown-item" asp-action="Index">
-                <a asp-action="GetByCategory" style="font-size: 18px;" asp-route-categoryId="@cat.Id">@cat.Name</a>
-                @if (User.IsInRole("admin"))
-                {
-
-                    <a class="font-italic " style="color: red" asp-controller="Category" asp-action="Edit" asp-route-id="@cat.Id">edit</a>
-                }
+                <a class="link-dark" asp-action="Index">Default</a>
             </p>
-        }
-
-    </div>
-    </div>
-
-    <div>
-    <button style="margin-top: 20px;" class="btn btn-outline-secondary dropdown-toggle" id="qwer" type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-        Filter
-    </button>
-    <div class="dropdown-menu" aria-labelledby="qwer">
-        <h6 class="dropdown-header">By price</h6>
-        <p class="dropdown-item" asp-action="Index">
-            <a class="link-dark" asp-action="Index">Default</a>
-        </p>
-        <p class="dropdown-item">
-            <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_asc")">Price higher</a>
-        </p>
-        <p class="dropdown-item">
-            <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_desc")">Price lower</a>
-        </p>
-    </div>
+            <p class="dropdown-item">
+                <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_asc")">Price higher</a>
+            </p>
+            <p class="dropdown-item">
+                <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_desc")">Price lower</a>
+            </p>
+        </div>
     </div>
 
-    </div>
+</div>
 
-    <div class="col-10 d-flex justify-content-start align-items-center flex-wrap">
+<div class="col-10 d-flex justify-content-start align-items-center flex-wrap">
 
-        @foreach (var item in Model.Products) {
-            <div class="box horizontal d-flex" style="display: flex; justify-content: space-around; width: 100%">
-                <div class="card-image ">
-                    <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id">
-                        <img src="@item.Image" class="card-img-top" alt="...">
-                    </a>
-                </div>
-                <div class="card-content">
-                    <p style="font-size: 32px;">@Html.DisplayFor(modelItem => item.Title)</p>
-                    <p>Price: @Html.DisplayFor(modelItem => item.Price)</p>
-                    <p>@Html.DisplayFor(modelItem => item.Description)</p>
-                    <a class="waves-effect waves-light btn-large" asp-controller="Cart" asp-action="AddItem" asp-route-id="@item.Id">add</a>
-                </div>
+    @foreach (var item in Model.Products)
+    {
+        <div class="box horizontal d-flex gap" style="justify-content: space-around; width: 100%">
+            <div class="card-image ">
+                <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id">
+                    <img src="@item.Image" class="card-img-top" alt="...">
+                </a>
             </div>
-        }
-    </div>
-
+            <div class="card-content">
+                <p style="font-size: 32px;">@Html.DisplayFor(modelItem => item.Title)</p>
+                <p>Price: @Html.DisplayFor(modelItem => item.Price)</p>
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                <a class="waves-effect waves-light btn-large" asp-controller="Cart" asp-action="AddItem" asp-route-id="@item.Id">add</a>
+            </div>
+        </div>
+    }
+</div>

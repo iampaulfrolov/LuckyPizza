@@ -1,25 +1,32 @@
 ﻿.image {
-    width: 600px;
-    height: 500px;
-    object-fit:fill;
+    max-width: 600px;
+    max-height: 600px;
+    object-fit: cover;
 }
 
-
+.btn, .btn-large {
+    background: #ff968f !important;
+}
 
 .box {
-    border: 1px dashed tomato;
-    border-radius: 20px; 
+    border: 1px solid white;
+    border-radius: 20px;
     align-items: center;
-    margin: 5px;
+    margin: 5px 5px 20px;
+    padding: 20px;
+    -webkit-box-shadow: 14px 14px 31px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 14px 14px 31px -18px rgba(0, 0, 0, 0.75);
+    box-shadow: 14px 14px 31px -18px rgba(0, 0, 0, 0.75);
 }
 
 .box img {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
-   
-a { 
-    text-decoration: none; 
+
+a {
+    text-decoration: none;
 }
 
 .navbar a {
