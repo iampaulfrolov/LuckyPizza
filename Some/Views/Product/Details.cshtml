@@ -1,16 +1,15 @@
-﻿@using CourseProject.Models.ViewModels
-@model CourseProject.Models.DataModels.Product
+﻿@model CourseProject.Models.DataModels.Product
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Product details</h1>
+<h1>Details</h1>
 
 <div>
     @if (User.IsInRole("admin"))
     {
-        <a asp-action="Edit" class="btn btn-danger" asp-route-id="@Model.Id">Edit</a>
+        <a asp-action="Edit" style="margin-bottom: 20px" class="btn btn-danger" asp-route-id="@Model.Id">Edit</a>
     }
 </div>
     <div class="d-flex align-items-center justify-content-around">
