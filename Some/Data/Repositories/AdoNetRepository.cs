@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
-using System.Data.SqlTypes;
 using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -13,8 +11,6 @@ using CourseProject.Attributes;
 using CourseProject.Extensions;
 using CourseProject.Models;
 using CourseProject.Models.DataModels;
-using Kursach;
-using Kursach.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 
@@ -182,7 +178,7 @@ namespace CourseProject.Data.Repositories
             }
         }
 
-        private async Task<int> ExecuteNonQuery(string commandText)
+        protected async Task<int> ExecuteNonQuery(string commandText)
         {
             await using var connection = new SqlConnection(_connectionString);
             await using var command = new SqlCommand();
@@ -236,7 +232,7 @@ namespace CourseProject.Data.Repositories
             return transaction.Connection?.State == ConnectionState.Open;
         }
 
-        private async Task<List<TEntity>> ExecuteSelect(string selectCommand)
+        protected async Task<List<TEntity>> ExecuteSelect(string selectCommand)
         {
             var resultEntities = new List<TEntity>();
             await using var connection = new SqlConnection(_connectionString);

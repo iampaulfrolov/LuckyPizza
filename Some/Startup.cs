@@ -4,11 +4,12 @@ using CourseProject.Identity;
 using CourseProject.Identity.Models;
 using CourseProject.Models;
 using CourseProject.Models.DataModels;
-using Kursach.Models;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -46,12 +47,30 @@ namespace Some
                     )
                 .AddDefaultTokenProviders()
                 .AddDefaultUI();
+            
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+                })
+                .AddCookie()
+                .AddGoogle(options =>
+                {
+                    const string clientId = "372741696784-joitl276u7i76gqiltni09rpcc34nar7.apps.googleusercontent.com";
+                    const string clientSecret = "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";
+                    
+                    options.ClientId = clientId;
+                    options.ClientSecret = clientSecret;
+                    options.ClaimActions.MapJsonKey("urn:google:picture","picture","url");
+                    
+                });
 
             services.AddTransient<IUserStore<User>, UserStore>();
             services.AddTransient<IRoleStore<Role>, RoleStore>();
 
 
             services.AddTransient(typeof(IRepository<>), typeof(AdoNetRepository<>));
+            services.AddTransient<IUserRepository, UserRepository>();
             services.AddControllersWithViews();
             
         }

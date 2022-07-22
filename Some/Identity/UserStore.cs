@@ -11,12 +11,13 @@ namespace CourseProject.Identity
 {
     public class UserStore : IUserPasswordStore<User>,
         IUserRoleStore<User>,
-        IUserPhoneNumberStore<User>
+        IUserPhoneNumberStore<User>,
+        IUserLoginStore<User>
     {
-        private readonly IRepository<User> _userRepository;
+        private readonly IUserRepository _userRepository;
         private readonly IRepository<Role> _roleRepository;
 
-        public UserStore(IRepository<User> userRepository, IRepository<Role> roleRepository)
+        public UserStore(IUserRepository userRepository, IRepository<Role> roleRepository)
         {
             _userRepository = userRepository;
             _roleRepository = roleRepository;
@@ -164,6 +165,39 @@ namespace CourseProject.Identity
         public Task SetPhoneNumberConfirmedAsync(User user, bool confirmed, CancellationToken cancellationToken)
         {
             return Task.FromResult(1);
+        }
+
+        public async Task AddLoginAsync(User user, UserLoginInfo login, CancellationToken cancellationToken)
+        {
+            user.LoginProvider = login.LoginProvider;
+            user.ProviderKey = login.ProviderKey;
+
+            var dbUser = await _userRepository.GetById(user.Id);
+
+            if (dbUser == null)
+            {
+                await _userRepository.Create(user);
+            }
+            else
+            {
+                await _userRepository.Update(user, x => x.Id, user.Id);
+            }
+        }
+
+        public Task RemoveLoginAsync(User user, string loginProvider, string providerKey, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IList<UserLoginInfo>> GetLoginsAsync(User user, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<User> FindByLoginAsync(string loginProvider, string providerKey, CancellationToken cancellationToken)
+        {
+            var user = await _userRepository.FindByLogin(loginProvider, providerKey);
+            return user;
         }
     }
 }
