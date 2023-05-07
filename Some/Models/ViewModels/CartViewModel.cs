@@ -1,44 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using CourseProject.Models.DataModels;
-using Kursach.Models;
 
-namespace CourseProject.Models.ViewModels
+namespace CourseProject.Models.ViewModels;
+
+[Serializable]
+public class CartViewModel
 {
-    [Serializable]
-    public class CartViewModel
+    public CartViewModel(List<CartItemViewModel> items)
     {
-        public decimal Amount { get;  set; }
-        public List<CartItemViewModel> Items { get; set; }
-        
-        public void AddItem(CartItemViewModel item)
-        {
-            Items.Add(item);
-            Amount += item.Quantity * item.Product.Price;
-        }
-
-        public CartViewModel(List<CartItemViewModel> items)
-        {
-            Items = items;
-        }
-
-        public CartViewModel()
-        {
-            Items = new List<CartItemViewModel>();
-        }
+        Items = items;
     }
 
-    [Serializable]
-    public class CartItemViewModel
+    public CartViewModel()
     {
-        public Product Product { get; set; }
-
-        public int Quantity { get; set; }
-
-        public CartItemViewModel(Product product)
-        {
-            Product = product;
-            Quantity = 1;
-        }
+        Items = new List<CartItemViewModel>();
     }
+
+    public decimal Amount { get; set; }
+    public List<CartItemViewModel> Items { get; set; }
+
+    public void AddItem(CartItemViewModel item)
+    {
+        Items.Add(item);
+        Amount += item.Quantity * item.Product.Price;
+    }
+}
+
+[Serializable]
+public class CartItemViewModel
+{
+    public CartItemViewModel(Product product)
+    {
+        Product = product;
+        Quantity = 1;
+    }
+
+    public Product Product { get; set; }
+
+    public int Quantity { get; set; }
 }

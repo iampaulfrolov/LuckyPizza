@@ -1,4 +1,6 @@
-﻿@model CourseProject.Models.DataModels.Product
+﻿@using CourseProject.Data
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model CourseProject.Models.DataModels.Product
 
 @{
     ViewData["Title"] = "Details";
@@ -7,51 +9,47 @@
 <h1>Details</h1>
 
 <div>
-    @if (User.IsInRole("admin"))
+    @if (User.IsInRole(RoleConst.Admin))
     {
         <a asp-action="Edit" style="margin-bottom: 20px" class="btn btn-danger" asp-route-id="@Model.Id">Edit</a>
     }
 </div>
-    <div class="d-flex align-items-center justify-content-around">
-        <img class="image" src="@Model.Image" alt="Alternate Text" />
-        <div class="d-flex flex-column ml-5">
-            <dl class="row">
-                <dt class="col-sm-4">
-                    Title:
-                </dt>
-                <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.Title)
-                </dd>
-                <dt class="col-sm-4">
-                    @Html.DisplayNameFor(model => model.Description):
-                </dt>
-                <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.Description)
-                </dd>
-                <dt class="col-sm-4">
-                    @Html.DisplayNameFor(model => model.Price):
-                </dt>
-                <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.Price)
-                </dd>
-                <dt class="col-sm-4">
-                    Category:
-                </dt>
-                <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.Category.Name)
-                </dd>
-            </dl>
+<div class="d-flex align-items-center justify-content-around">
+    <img class="image" src="@Model.Image" alt="Alternate Text"/>
+    <div class="d-flex flex-column ml-5">
+        <dl class="row">
+            <dt class="col-sm-4">
+                Title:
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Description):
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Price):
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt class="col-sm-4">
+                Category:
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Category.Name)
+            </dd>
+        </dl>
 
-            <div>
-                @Html.ActionLink("Add To Cart", "AddItem", "Cart", new { id = Model.Id }, new { @class = "btn btn-danger" })
-                @if (User.IsInRole("anon"))
-                {
-                    <a asp-action="Edit" class="btn btn-danger" asp-route-id="@Model.Id">Edit</a>
-                }
-            </div>
+        <div>
+            @Html.ActionLink("Add To Cart", "AddItem", "Cart", new { id = Model.Id }, new { @class = "btn btn-danger" })
+            @if (User.IsInRole("anon"))
+            {
+                <a asp-action="Edit" class="btn btn-danger" asp-route-id="@Model.Id">Edit</a>
+            }
         </div>
     </div>
-
-
-
-
+</div>

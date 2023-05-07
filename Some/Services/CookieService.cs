@@ -1,7 +1,5 @@
-﻿namespace Some.Services
+﻿namespace Some.Services;
+
+public class CookieService
 {
-    public class CookieService
-    {
-        
-    }
 }

@@ -1,4 +1,5 @@
-﻿@model CourseProject.Models.ViewModels.ProductIndexViewModel
+﻿@using CourseProject.Data
+@model CourseProject.Models.ViewModels.ProductIndexViewModel
 
 @{
     ViewData["Title"] = "Main";
@@ -20,14 +21,14 @@
             Category
         </button>
         <div class="dropdown-menu" aria-labelledby="asd">
-            <h6 class="dropdown-header">By category</h6>
+            <h6 class="dropdown-header" style="margin: 5px 0 10px; padding: 0 1.5rem">By category</h6>
             @foreach (var cat in Model.Categories)
             {
-                <p class="dropdown-item" asp-action="Index">
-                    <a asp-action="GetByCategory" style="font-size: 18px;" asp-route-categoryId="@cat.Id">@cat.Name</a>
-                    @if (User.IsInRole("admin"))
+                <p class="dropdown-item" style="margin: 0" asp-action="Index" style="cursor: pointer;">
+                    <a asp-action="GetByCategory" style="font-size: 18px; text-decoration: none" asp-route-categoryId="@cat.Id">@cat.Name</a>
+                    @if (User.IsInRole(RoleConst.Admin))
                     {
-                        <a class="font-italic " style="color: red" asp-controller="Category" asp-action="Edit" asp-route-id="@cat.Id">edit</a>
+                        <a class="font-italic" style="color: red" asp-controller="Category" asp-action="Edit" asp-route-id="@cat.Id">edit</a>
                     }
                 </p>
             }
@@ -38,17 +39,17 @@
     <div>
         <button class="btn btn-outline-secondary dropdown-toggle" id="qwer" type="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-            Price
+            Sort
         </button>
         <div class="dropdown-menu" aria-labelledby="qwer">
-            <h6 class="dropdown-header">By price</h6>
-            <p class="dropdown-item" asp-action="Index">
+            <h6 class="dropdown-header" style="margin: 5px 0 10px; padding: 0 1.5rem">By price</h6>
+            <p class="dropdown-item" style="margin: 0" asp-action="Index">
                 <a class="link-dark" asp-action="Index">Default</a>
             </p>
-            <p class="dropdown-item">
+            <p class="dropdown-item" style="margin: 0">
                 <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_asc")">Price higher</a>
             </p>
-            <p class="dropdown-item">
+            <p class="dropdown-item" style="margin: 0">
                 <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_desc")">Price lower</a>
             </p>
         </div>
@@ -56,11 +57,10 @@
 
 </div>
 
-<div class="col-10 d-flex justify-content-start align-items-center flex-wrap">
-
+<div class="col-10 d-flex justify-content-start align-items-center flex-wrap" style="gap: 40px">
     @foreach (var item in Model.Products)
     {
-        <div class="box horizontal d-flex gap" style="justify-content: space-around; width: 100%">
+        <div class="box horizontal d-flex" style="justify-content: space-around; width: 100%;">
             <div class="card-image ">
                 <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id">
                     <img src="@item.Image" class="card-img-top" alt="...">
@@ -75,3 +75,8 @@
         </div>
     }
 </div>
+
+@if (!Model.Products.Any())
+{
+    <p class="text-center">Дані відсутні</p>
+}

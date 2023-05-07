@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj": {}
+    "/Users/paulfrolov/RiderProjects/LuckyPizza2/Some/LuckyPizza.csproj": {}
   },
   "projects": {
-    "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj": {
+    "/Users/paulfrolov/RiderProjects/LuckyPizza2/Some/LuckyPizza.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj",
+        "projectUniqueName": "/Users/paulfrolov/RiderProjects/LuckyPizza2/Some/LuckyPizza.csproj",
         "projectName": "CourseProject",
-        "projectPath": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj",
+        "projectPath": "/Users/paulfrolov/RiderProjects/LuckyPizza2/Some/LuckyPizza.csproj",
         "packagesPath": "/Users/paulfrolov/.nuget/packages/",
-        "outputPath": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/obj/",
+        "outputPath": "/Users/paulfrolov/RiderProjects/LuckyPizza2/Some/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/paulfrolov/.nuget/NuGet/NuGet.Config"
@@ -41,6 +41,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[10.1.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.7, )"
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",

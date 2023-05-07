@@ -2,28 +2,26 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using CourseProject.Models;
 using CourseProject.Models.DataModels;
 
-namespace CourseProject.Data.Repositories
+namespace CourseProject.Data.Repositories;
+
+public interface IRepository<TEntity> where TEntity : Entity
 {
-    public interface IRepository<TEntity> where TEntity : Entity
-    {
-        Task<int> Create(TEntity entity, int masterId = 0);
+    Task<int> Create(TEntity entity, int masterId = 0);
 
-        Task<TEntity> Get<TProperty>(Expression<Func<TEntity, TProperty>> propertyExpression, TProperty value);
-        Task<IEnumerable<TEntity>> GetMany<TProperty>(Expression<Func<TEntity, TProperty>> propertyExpression, TProperty value);
+    Task<TEntity> Get<TProperty>(Expression<Func<TEntity, TProperty>> propertyExpression, TProperty value);
 
-        Task<IEnumerable<TEntity>> GetAll(int id =0);
+    Task<IEnumerable<TEntity>> GetMany<TProperty>(Expression<Func<TEntity, TProperty>> propertyExpression,
+        TProperty value);
 
-        Task<TEntity> GetById(int id);
+    Task<IEnumerable<TEntity>> GetAll(int id = 0);
 
-        Task Update<TProperty>(TEntity entity, Expression<Func<TEntity, TProperty>> propertyExpression, TProperty value);
+    Task<TEntity> GetById(int id);
 
-        Task Delete<TProperty>(Expression<Func<TEntity, TProperty>> propertyExpression, TProperty value);
+    Task Update<TProperty>(TEntity entity, Expression<Func<TEntity, TProperty>> propertyExpression, TProperty value);
 
-        Task ExecuteRawSql(string command);
-    }
+    Task Delete<TProperty>(Expression<Func<TEntity, TProperty>> propertyExpression, TProperty value);
 
-
+    Task ExecuteRawSql(string command);
 }

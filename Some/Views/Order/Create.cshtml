@@ -13,22 +13,22 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <select class="form-control" asp-for="Delivery.DeliveryProvider.Id"
                     asp-items="@(new SelectList(Model.DeliveryProviders, "Id", "Name"))">
-                
+
             </select>
             <label class="control-label">Delivery type</label>
             <select class="form-control" asp-for="Delivery.DeliveryType.Id"
                     asp-items="@(new SelectList(Model.DeliveryTypes, "Id", "Name"))">
-                
+
             </select>
             <div class="form-group">
                 <label asp-for="Delivery.Address" class="control-label">Address</label>
-                <input asp-for="Delivery.Address" class="form-control" />
+                <input asp-for="Delivery.Address" class="form-control"/>
                 <span asp-validation-for="Delivery.Address" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Delivery.Date" class="control-label"></label>
-                <input asp-for="Delivery.Date" class="form-control" />
+                <input asp-for="Delivery.Date" min="@DateTime.Now.ToString("yyyy-MM-ddThh:mm")" max="@DateTime.Now.AddYears(1).ToString("yyyy-MM-ddThh:mm")" class="form-control"/>
                 <span asp-validation-for="Delivery.Date" class="text-danger"></span>
             </div>
 
@@ -41,5 +41,5 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
 }
