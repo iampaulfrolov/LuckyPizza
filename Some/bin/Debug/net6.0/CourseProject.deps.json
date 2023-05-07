@@ -9,6 +9,7 @@
       "CourseProject/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
+          "Microsoft.AspNetCore.Authentication.Google": "6.0.7",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.6",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.6",
           "Microsoft.AspNetCore.Identity.UI": "5.0.6",
@@ -56,6 +57,14 @@
       "materialize/0.97.6": {
         "dependencies": {
           "jQuery": "3.6.0"
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/6.0.7": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "6.0.7.0",
+            "fileVersion": "6.0.722.32205"
+          }
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.6": {},
@@ -1643,6 +1652,13 @@
       "sha512": "sha512-OkglpguooZOAF/gJPw+lPQsxz5fLaj3xPGd7gXcSPorugUiOYjD/zIUP+bJep95Xkll2CXtpLvfWS94Jvw9A9Q==",
       "path": "materialize/0.97.6",
       "hashPath": "materialize.0.97.6.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/6.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JMmRAvF7EWVTJuREutLIiXZZdnQsu0iMLXr+pN95TxEIcwmLq11EEJ57QzG/5qq77Whc4MWwhXvmg5RC0v5/Zg==",
+      "path": "microsoft.aspnetcore.authentication.google/6.0.7",
+      "hashPath": "microsoft.aspnetcore.authentication.google.6.0.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.6": {
       "type": "package",

@@ -1,61 +1,62 @@
 ﻿using System;
 
-namespace CourseProject.Attributes
+namespace CourseProject.Attributes;
+
+public class ForeignKeyToMany : Attribute
 {
-    public class ForeignKeyToMany : Attribute
+    public ForeignKeyToMany(string relatedTableName)
     {
-        public string RelatedTableName { get; set; }
-        public ForeignKeyToMany(string relatedTableName)
-        {
-            relatedTableName = RelatedTableName;
-        }
+        relatedTableName = RelatedTableName;
     }
 
-    public class ReadOnlyPropertyAttribute : Attribute
-    {
+    public string RelatedTableName { get; set; }
+}
 
+public class ReadOnlyPropertyAttribute : Attribute
+{
+}
+
+public class TableNameAttribute : Attribute
+{
+    public TableNameAttribute(string name)
+    {
+        Name = name;
     }
 
-    public class TableNameAttribute : Attribute
-    {
-        public string Name { get; set; }
+    public string Name { get; set; }
+}
 
-        public TableNameAttribute(string name)
-        {
-            Name = name;
-        }
+public class TransitionTableNameAttribute : TableNameAttribute
+{
+    public TransitionTableNameAttribute(string name) : base(name)
+    {
     }
+}
 
-    public class TransitionTableNameAttribute : TableNameAttribute
+public class RelatedTableNameAttribute : TableNameAttribute
+{
+    public RelatedTableNameAttribute(string name) : base(name)
     {
-        public TransitionTableNameAttribute(string name) : base(name)
-        {
-        }
     }
+}
 
-    public class RelatedTableNameAttribute : TableNameAttribute
+public class RelatedEntityTypeAttribute : TableNameAttribute
+{
+    public RelatedEntityTypeAttribute(string name) : base(name)
     {
-        public RelatedTableNameAttribute(string name) : base(name)
-        {
-        }
     }
-    public class RelatedEntityTypeAttribute : TableNameAttribute
-    {
-        public RelatedEntityTypeAttribute(string name) : base(name)
-        {
-        }
-    }
+}
 
-    public class MasterEntityNameAttribute : TableNameAttribute
+public class MasterEntityNameAttribute : TableNameAttribute
+{
+    public MasterEntityNameAttribute(string name) : base(name)
     {
-        public MasterEntityNameAttribute(string name) : base(name)
-        {
-        }
     }
-    public class MasterTableNameAttribute : TableNameAttribute
+}
+
+public class MasterTableNameAttribute : TableNameAttribute
+{
+    public MasterTableNameAttribute(string name) : base(name)
     {
-        public MasterTableNameAttribute(string name) : base(name)
-        {
-        }
     }
 }

@@ -264,6 +264,18 @@
           "jQuery": "2.1.1"
         }
       },
+      "Microsoft.AspNetCore.Authentication.Google/6.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.6": {
         "type": "package",
         "compile": {
@@ -2815,6 +2827,21 @@
         "content/scripts/materialize/materialize.min.js",
         "materialize.0.97.6.nupkg.sha512",
         "materialize.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Google/6.0.7": {
+      "sha512": "JMmRAvF7EWVTJuREutLIiXZZdnQsu0iMLXr+pN95TxEIcwmLq11EEJ57QzG/5qq77Whc4MWwhXvmg5RC0v5/Zg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.google/6.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.xml",
+        "microsoft.aspnetcore.authentication.google.6.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.6": {
@@ -8395,6 +8422,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper >= 10.1.1",
+      "Microsoft.AspNetCore.Authentication.Google >= 6.0.7",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.6",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.6",
@@ -8415,11 +8443,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj",
+      "projectUniqueName": "/Users/paulfrolov/RiderProjects/LuckyPizza2/Some/LuckyPizza.csproj",
       "projectName": "CourseProject",
-      "projectPath": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/LuckyPizza.csproj",
+      "projectPath": "/Users/paulfrolov/RiderProjects/LuckyPizza2/Some/LuckyPizza.csproj",
       "packagesPath": "/Users/paulfrolov/.nuget/packages/",
-      "outputPath": "/Users/paulfrolov/RiderProjects/LuckyPizza/Some/obj/",
+      "outputPath": "/Users/paulfrolov/RiderProjects/LuckyPizza2/Some/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/paulfrolov/.nuget/NuGet/NuGet.Config"
@@ -8449,6 +8477,10 @@
           "AutoMapper": {
             "target": "Package",
             "version": "[10.1.1, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[6.0.7, )"
           },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",

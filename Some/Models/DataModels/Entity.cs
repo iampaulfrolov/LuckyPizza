@@ -1,14 +1,8 @@
 ﻿using CourseProject.Attributes;
 
-namespace CourseProject.Models.DataModels
-{
-    public abstract class Entity
-    {
-        [ReadOnlyProperty] 
-        public virtual int Id { get; set; }
+namespace CourseProject.Models.DataModels;
 
-        protected Entity()
-        {
-        }
-    }
+public abstract class Entity
+{
+    [ReadOnlyProperty] public virtual int Id { get; set; }
 }

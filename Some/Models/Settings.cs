@@ -1,7 +1,6 @@
-﻿namespace CourseProject.Models
+﻿namespace CourseProject.Models;
+
+public class Settings
 {
-    public class Settings
-    {
-        public string DbConnection { get; set; }
-    }
+    public string DbConnection { get; set; }
 }

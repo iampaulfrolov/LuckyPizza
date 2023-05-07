@@ -1,7 +1,8 @@
-﻿@using Microsoft.AspNetCore.Identity
-@using CourseProject.Models.DataModels
+﻿@using CourseProject.Models.DataModels
+@using Microsoft.AspNetCore.Identity
+@using CourseProject.Data
 @model CourseProject.Models.ViewModels.OrderConfirmViewModel
-@inject UserManager<User> _userManager
+@inject UserManager<User> UserManager
 
 <div style="display: flex; gap: 10px; margin: 20px auto">
     @foreach (var status in Model.StatusList)
@@ -21,13 +22,14 @@
         visibility: visible;
     }
 </style>
-<div id="msgform" class="form-popup" style="display: none; position: fixed; bottom: 0; right: 15px; border: 3px solid #f1f1f1; z-index: 9;" id="myForm">
+<div class="form-popup" style="display: none; position: fixed; bottom: 0; right: 15px; border: 3px solid #f1f1f1; z-index: 9;" id="msgForm">
     <form class="form-container">
 
-        <label for="msg">
+        <label>
             <b>Message</b>
+            <input type="text" placeholder="Enter Message" name="msg" required>
         </label>
-        <input type="text" placeholder="Enter Message" name="msg" required>
+        
 
         <button type="submit" class="btn" onclick="saveForm()">Save</button>
         <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
@@ -36,11 +38,11 @@
 
 @if (!Model.Orders.Any())
 {
-    <p class="text-center">"Дані відсутні"</p>
+    <p class="text-center">Дані відсутні</p>
 }
 <table class="table details 
         @(!Model.Orders.Any() ? "hidden" : "visible") 
-        @(Model.Orders.Any() && Model.Orders[0].Status.Name == "in progress" ? "success" : "table-dark")
+        @(Model.Orders.Any() && Model.Orders[0].Status.Name == OrderStatusConst.InProgress ? "success" : "table-dark")
          table-striped table-hover">
     <thead>
     <tr>
@@ -52,15 +54,15 @@
     </thead>
 
     <tbody>
-    @for (var i = 0; i < Model.Orders.Count(); i++)
+    @for (var i = 0; i < Model.Orders.Count; i++)
     {
         <tr>
             <th scope="row">@(i + 1)</th>
             <td>@(Model.Orders[i].User.Name)</td>
-            <td>@Model.Orders[i].Products.Sum(p => (decimal)p.Quantity * p.Price)</td>
+            <td>@Model.Orders[i].Products.Sum(p => p.Quantity * p.Price)</td>
 
             <td>
-                @if (Model.Orders[i].Status.Name == "in progress")
+                @if (Model.Orders[i].Status.Name == OrderStatusConst.InProgress)
                 {
                     <a class="btn btn-outline-warning"
                        asp-controller="Order" asp-action="Confirm" asp-route-id="@Model.Orders[i].Id">
@@ -76,22 +78,26 @@
     }
     </tbody>
 </table>
+
 <script>
     function openForm() {
         document.getElementById("msgForm").style.display = "block";
     }
 
     function saveForm() {
+        const text = document.getElementsByName("msg").values()[0];
 
-        var text = document.getElementsByName("msg").values()[0];
+        let msg = getCookie("msg");
 
-        var msg = getCookie("msg");
-        if (msg == undefined)
-            msg = [new { text: text, userId: "@_userManager.GetUserId(User)" }];
-        else msg.add(new { text: text, userId: "@_userManager.GetUserId(User)" });
+        if (msg === undefined) {
+          msg = [{ text: text, userId: "@UserManager.GetUserId(User)" }];
+        } else {
+          msg.add({ text: text, userId: "@UserManager.GetUserId(User)" });
+        }
+        
         setCookie("msg", msg, 10);
 
-        document.getElementById("msgForm").style.display = "none";
+        closeForm();
     }
 
     function closeForm() {
@@ -99,9 +105,11 @@
     }
 
     function setCookie(name,value,days) {
-        var expires = "";
+        let expires = '';
+        
         if (days) {
-            var date = new Date();
+            const date = new Date();
+
             date.setTime(date.getTime() + (days*24*60*60*1000));
             expires = "; expires=" + date.toUTCString();
         }
@@ -110,7 +118,7 @@
 
     function getCookie(name) {
         let matches = document.cookie.match(new RegExp(
-            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            "(?:^|; )" + name.replace(/([.$?*|{}()\[\]\\\/+^])/g, '\\$1') + "=([^;]*)"
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }

@@ -20,14 +20,14 @@
             Category
         </button>
         <div class="dropdown-menu" aria-labelledby="asd">
-            <h6 class="dropdown-header">By category</h6>
+            <h6 class="dropdown-header" style="margin: 5px 0 10px; padding: 0 1.5rem">By category</h6>
             @foreach (var cat in Model.Categories)
             {
-                <p class="dropdown-item" asp-action="Index">
-                    <a asp-action="GetByCategory" style="font-size: 18px;" asp-route-categoryId="@cat.Id">@cat.Name</a>
+                <p class="dropdown-item" style="margin: 0" asp-action="Index" style="cursor: pointer;">
+                    <a asp-action="GetByCategory" style="font-size: 18px; text-decoration: none" asp-route-categoryId="@cat.Id">@cat.Name</a>
                     @if (User.IsInRole("admin"))
                     {
-                        <a class="font-italic " style="color: red" asp-controller="Category" asp-action="Edit" asp-route-id="@cat.Id">edit</a>
+                        <a class="font-italic" style="color: red" asp-controller="Category" asp-action="Edit" asp-route-id="@cat.Id">edit</a>
                     }
                 </p>
             }
@@ -41,14 +41,14 @@
             Price
         </button>
         <div class="dropdown-menu" aria-labelledby="qwer">
-            <h6 class="dropdown-header">By price</h6>
-            <p class="dropdown-item" asp-action="Index">
+            <h6 class="dropdown-header" style="margin: 5px 0 10px; padding: 0 1.5rem">By price</h6>
+            <p class="dropdown-item" style="margin: 0" asp-action="Index">
                 <a class="link-dark" asp-action="Index">Default</a>
             </p>
-            <p class="dropdown-item">
+            <p class="dropdown-item" style="margin: 0">
                 <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_asc")">Price higher</a>
             </p>
-            <p class="dropdown-item">
+            <p class="dropdown-item" style="margin: 0">
                 <a class="link-dark" asp-action="Index" asp-route-sortOrder="@("price_desc")">Price lower</a>
             </p>
         </div>

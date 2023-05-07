@@ -8,22 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="">
+    <list default="true" id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="Lint">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Views/Order/Confirm.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Order/Confirm.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Views/Order/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Order/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Views/Product/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Product/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/Delivery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/Delivery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Models/ViewModels/UserViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/ViewModels/UserViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Views/Order/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Order/Create.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Some/Views/Product/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Product/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Some/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Views/User/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/User/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.staticwebassets.runtime.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/wwwroot/css/StyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/Some/wwwroot/css/StyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Some/wwwroot/css/site.css" afterDir="false" />
-    </list>
-    <list id="f5d64220-c174-4ee2-a048-5a889afcc186" name="Changes2" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,48 +36,64 @@
         <entry key="$PROJECT_DIR$" value="fix" />
       </map>
     </option>
-  </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="main" />
-      </list>
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/91a84fe4b35624290abf32df61ac6c77c502a5bbb0616172bdce8fee8fdc2a/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e992aa846b3931e0fc4d42d1b924ec315574105587c99756f5594181c5faf7/ValidationMessageTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ed27185037b6683e20638222ae5d1a796faf37e9bc9e0e34edf4297620e8/HtmlHelperDisplayExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Areas/Identity/Pages/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Areas/Identity/Pages/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Attributes/TableAtributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Controllers/CartController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Controllers/CategoryController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Controllers/OrderController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Controllers/OrderController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Controllers/OrderController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Controllers/ProductController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Data/Repositories/AdoNetRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Data/RoleConst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Data/TableInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Data/TableInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Models/DataModels/Category.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Models/DataModels/Category.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Models/DataModels/Delivery.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Models/DataModels/Delivery.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Models/ViewModels/UserViewModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Category/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Category/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Order/Confirm.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Order/Confirm.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Order/Confirm.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Order/Confirm.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Product/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Product/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/Shared/_LoginPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/User/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/jquery/dist/jquery.min.map" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JiraServerManager">
     <selected>-1</selected>
     <servers />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml">
-      <ranges>
-        <range start1="10" end1="29" start2="10" end2="13" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="30" end1="30" start2="14" end2="15" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="31" end1="33" start2="16" end2="25" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="47" end1="48" start2="39" end2="40" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="51" end1="51" start2="43" end2="50" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="52" end1="60" start2="51" end2="55" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="65" end1="65" start2="60" end2="81" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="74" end1="85" start2="90" end2="101" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="86" end1="90" start2="102" end2="106" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="92" end1="93" start2="108" end2="109" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="128" end1="129" start2="144" end2="146" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="134" end1="134" start2="151" end2="152" changelist="50b62f8b-81c2-4043-833f-e2825534453e" />
-        <range start1="163" end1="164" start2="181" end2="196" changelist="f5d64220-c174-4ee2-a048-5a889afcc186" />
-        <range start1="176" end1="177" start2="208" end2="221" changelist="f5d64220-c174-4ee2-a048-5a889afcc186" />
-        <range start1="186" end1="187" start2="230" end2="232" changelist="f5d64220-c174-4ee2-a048-5a889afcc186" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2C5CBoUCu50sCG11tZ1KxMxOYs5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -94,6 +105,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,6 +117,11 @@
     "DatabaseDriversLRU": [
       "sqlserver.localdb",
       "sqlserver"
+    ],
+    "rider.external.source.directories": [
+      "/Users/paulfrolov/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache",
+      "/Users/paulfrolov/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache",
+      "/Users/paulfrolov/.local/share/Symbols/src"
     ]
   }
 }]]></component>
@@ -144,13 +161,15 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="" />
-      <changelist id="f5d64220-c174-4ee2-a048-5a889afcc186" name="Changes2" comment="" />
+      <changelist id="" name="Changes2" comment="" />
       <created>1658082931241</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658082931241</updated>
       <workItem from="1658082935295" duration="6749000" />
       <workItem from="1658338815181" duration="4462000" />
+      <workItem from="1658563884497" duration="2016000" />
+      <workItem from="1683460799386" duration="9024000" />
     </task>
     <task id="LOCAL-00001" summary="Fix project">
       <created>1658083093147</created>
@@ -180,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658091216688</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Lint">
+      <created>1683462859650</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683462859650</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Lint">
+      <created>1683466358578</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683466358578</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +236,27 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Fix project" />
     <MESSAGE value="Fix Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Project" />
+    <MESSAGE value="Lint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lint" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Some/Views/Order/Confirm.cshtml</url>
+          <line>22</line>
+          <properties documentPath="$PROJECT_DIR$/Some/Views/Order/Confirm.cshtml" initialLine="22" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

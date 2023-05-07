@@ -1,30 +1,28 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using CourseProject.Attributes;
 using CourseProject.Identity.Models;
-using Microsoft.AspNetCore.Identity;
 
-namespace CourseProject.Models.DataModels
+namespace CourseProject.Models.DataModels;
 
+[TableName("User_")]
+public class User : Entity
 {
-    [TableName("User_")]
-    public class User:Entity
+    public User()
     {
-        public string LoginProvider { get; set; }
-        public string ProviderKey { get; set; }
-        public string Email { get; set; }
-        public string UserName { get; set; }
-        public string Surname { get; set; }
-
-        public string Name  { get; set; }
-        public string PasswordHash { get; set; }
-
-        [ForeignKey("role_id")] 
-        public Role Role { get; set; }
-        public string PhoneNumber { get; set; }
-
-        public User()
-        {
-            Role = new Role();
-        }
+        Role = new Role();
     }
+
+    public string LoginProvider { get; set; }
+    public string ProviderKey { get; set; }
+    public string Email { get; set; }
+    [DisplayName("UserName")] public string UserName { get; set; }
+    public string Surname { get; set; }
+
+    public string Name { get; set; }
+    public string PasswordHash { get; set; }
+
+    [ForeignKey("role_id")] public Role Role { get; set; }
+
+    public string PhoneNumber { get; set; }
 }
