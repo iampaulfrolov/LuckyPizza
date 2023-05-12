@@ -19,8 +19,6 @@ public class Delivery : Entity
 
     public DateTime Date { get; set; }
 
-    public int Parcel_number { get; set; }
-
     [ForeignKey("provider_id")] public DeliveryProvider DeliveryProvider { get; set; }
 
     [ForeignKey("type_id")] public DeliveryType DeliveryType { get; set; }

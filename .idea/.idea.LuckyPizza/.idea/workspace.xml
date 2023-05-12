@@ -8,9 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="Lint">
+    <list default="true" id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Views/Product/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Views/Product/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Controllers/OrderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/Delivery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/Delivery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Some/test.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +35,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5059b2f129d6cb3b8a9dfc18a6ea43b382c63680777ca591f1e2f97e7a5/ClaimsPrincipal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/91a84fe4b35624290abf32df61ac6c77c502a5bbb0616172bdce8fee8fdc2a/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e992aa846b3931e0fc4d42d1b924ec315574105587c99756f5594181c5faf7/ValidationMessageTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ed27185037b6683e20638222ae5d1a796faf37e9bc9e0e34edf4297620e8/HtmlHelperDisplayExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Controllers/ProductController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Models/DataModels/Product.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paulfrolov/RiderProjects/LuckyPizza2/Some/Views/User/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Some/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" root0="FORCE_HIGHLIGHTING" />
@@ -57,6 +59,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
   <component name="ProjectId" id="2C5CBoUCu50sCG11tZ1KxMxOYs5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -133,6 +138,10 @@
       <workItem from="1658563884497" duration="2016000" />
       <workItem from="1683460799386" duration="9290000" />
       <workItem from="1683470286266" duration="1908000" />
+      <workItem from="1683545947075" duration="465000" />
+      <workItem from="1683802548751" duration="570000" />
+      <workItem from="1683807670426" duration="1242000" />
+      <workItem from="1683892487773" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="Fix project">
       <created>1658083093147</created>
@@ -190,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683471779719</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ignore">
+      <created>1683476529893</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683476529893</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ignore">
+      <created>1683476564159</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683476564159</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

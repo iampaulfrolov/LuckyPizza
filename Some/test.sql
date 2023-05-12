@@ -52,7 +52,6 @@ CREATE TABLE [dbo].[Delivery]
 ),
     [Address] [text] NOT NULL,
     [Date] [datetime] NOT NULL,
-    [Parcel_Number] [int] NOT NULL,
     [provider_id] [int] NOT NULL,
     [type_id] [int] NOT NULL,
     [order_Id] [int] NOT NULL

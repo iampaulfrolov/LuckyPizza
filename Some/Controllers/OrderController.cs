@@ -74,14 +74,12 @@ public class OrderController : Controller
             order.Products.Add(new OrderProduct(item.Quantity, item.Quantity * item.Product.Price)
                 { Id = item.Product.Id });
 
-        var parcelNum = new Random().Next(10000000, 99999999);
         var delivery = new Delivery
         {
             Date = DateTime.Now,
             DeliveryProvider = model.Delivery.DeliveryProvider,
             DeliveryType = model.Delivery.DeliveryType,
             Address = model.Delivery.Address,
-            Parcel_number = parcelNum
         };
 
         var orderId = await _orderRepository.Create(order);
