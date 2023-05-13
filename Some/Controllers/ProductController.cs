@@ -7,6 +7,7 @@ using CourseProject.Models.DataModels;
 using CourseProject.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CourseProject.Controllers;
@@ -16,14 +17,16 @@ public class ProductController : Controller
 {
     private readonly IWebHostEnvironment _appEnvironment;
     private readonly IRepository<Category> _categoryRepository;
-    private readonly IRepository<Product> _productRepository;
+    private readonly IProductRepository _productRepository;
+    private readonly UserManager<User> _userManager;
 
-    public ProductController(IRepository<Product> productRepository, IRepository<Category> categoryRepository,
-        IWebHostEnvironment appEnvironment)
+    public ProductController(IProductRepository productRepository, IRepository<Category> categoryRepository,
+        IWebHostEnvironment appEnvironment, UserManager<User> userManager)
     {
         _productRepository = productRepository;
         _categoryRepository = categoryRepository;
         _appEnvironment = appEnvironment;
+        _userManager = userManager;
     }
 
 
@@ -48,7 +51,8 @@ public class ProductController : Controller
 
     public async Task<IActionResult> GetByCategory(int categoryId)
     {
-        var products = await _productRepository.GetMany(p => p.Category.Id, categoryId);
+        var userId = int.Parse(_userManager.GetUserId(User));
+        var products = await _productRepository.GetByCategory(categoryId, userId);
         var categories = await _categoryRepository.GetAll();
         var model = new ProductIndexViewModel(categories)
         {

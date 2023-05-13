@@ -63,7 +63,7 @@ public class Startup
         services.AddTransient<IUserStore<User>, UserStore>();
         services.AddTransient<IRoleStore<Role>, RoleStore>();
 
-
+        services.AddTransient<IProductRepository, ProductRepository>();
         services.AddTransient(typeof(IRepository<>), typeof(AdoNetRepository<>));
         services.AddTransient<IUserRepository, UserRepository>();
         services.AddControllersWithViews();

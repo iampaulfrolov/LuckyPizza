@@ -18,7 +18,7 @@ namespace CourseProject.Data.Repositories;
 
 public class AdoNetRepository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
 {
-    private readonly string _connectionString;
+    protected readonly string _connectionString;
     private readonly IOptions<Settings> _option;
 
     private readonly TableInfo<TEntity> _tableInfo;

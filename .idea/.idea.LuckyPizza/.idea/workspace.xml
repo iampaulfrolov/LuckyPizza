@@ -9,12 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50b62f8b-81c2-4043-833f-e2825534453e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Some/Data/Repositories/IProductRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuckyPizza/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Controllers/OrderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/Models/DataModels/Delivery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Models/DataModels/Delivery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Controllers/ProductController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Data/Repositories/AdoNetRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Data/Repositories/AdoNetRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Some/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Some/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Some/bin/Debug/net6.0/CourseProject.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Some/test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Some/test.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5059b2f129d6cb3b8a9dfc18a6ea43b382c63680777ca591f1e2f97e7a5/ClaimsPrincipal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7733bdb26b2be012c4266979a95d3728e74790201f91a02df4529ee6c2f37/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/91a84fe4b35624290abf32df61ac6c77c502a5bbb0616172bdce8fee8fdc2a/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e992aa846b3931e0fc4d42d1b924ec315574105587c99756f5594181c5faf7/ValidationMessageTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ed27185037b6683e20638222ae5d1a796faf37e9bc9e0e34edf4297620e8/HtmlHelperDisplayExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,31 +70,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;HotReloadSettingsPage&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver.localdb&quot;,
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver.localdb",
+      "sqlserver"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/paulfrolov/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/paulfrolov/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/paulfrolov/.local/share/Symbols/src&quot;
+    "rider.external.source.directories": [
+      "/Users/paulfrolov/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache",
+      "/Users/paulfrolov/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache",
+      "/Users/paulfrolov/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.LuckyPizza: Some">
     <configuration name="LuckyPizza: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Some/LuckyPizza.csproj" />
@@ -141,7 +143,10 @@
       <workItem from="1683545947075" duration="465000" />
       <workItem from="1683802548751" duration="570000" />
       <workItem from="1683807670426" duration="1242000" />
-      <workItem from="1683892487773" duration="612000" />
+      <workItem from="1683892487773" duration="851000" />
+      <workItem from="1683912158567" duration="2953000" />
+      <workItem from="1683965676861" duration="582000" />
+      <workItem from="1683966262913" duration="1671000" />
     </task>
     <task id="LOCAL-00001" summary="Fix project">
       <created>1658083093147</created>
@@ -213,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683476564159</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="remove parcel number">
+      <created>1683893214533</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683893214533</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +255,8 @@
     <MESSAGE value="Fix project" />
     <MESSAGE value="Fix Project" />
     <MESSAGE value="Lint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lint" />
+    <MESSAGE value="remove parcel number" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove parcel number" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -264,5 +277,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
